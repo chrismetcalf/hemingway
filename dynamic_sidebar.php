@@ -1,20 +1,20 @@
-<?php global $hemingway ?>
+<?php if( !function_exists('dynamic_sidebar') || !dynamic_sidebar()) : ?>
 <hr class="hide" />
-  <div id="ancillary">
-    <div class="inside">
-      <div class="block first">
-        <?php $hemingway->get_block_output('block_1'); ?>
-      </div>
-      
-      <div class="block">
-        <?php $hemingway->get_block_output('block_2'); ?>
-      </div>
-      
-      <div class="block">
-        <?php $hemingway->get_block_output('block_3'); ?>
-      </div>
-      
-      <div class="clear"></div>
+<div id="ancillary">
+  <div class="inside">
+    <div class="block first">
+      <?php dynamic_sidebar("Footer 1"); ?>
     </div>
+
+    <div class="block">
+      <?php dynamic_sidebar("Footer 2"); ?>
+    </div>
+
+    <div class="block">
+      <?php dynamic_sidebar("Footer 3"); ?>
+    </div>
+
+    <div class="clear"></div>
   </div>
-  <!-- [END] #ancillary -->  
+</div>
+<?php endif; ?>
